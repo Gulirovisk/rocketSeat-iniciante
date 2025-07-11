@@ -1,26 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url("./assets/bg.jpg");
     background-repeat: no-repeat;
+    /* keyword */
     background-size: 100% auto;
+    /* width height */
     background-position: top center;
+    /* vertical horizontal */
     background-color: #121214;
+    /* HEX: RR, GG, BB */
     color: white;
 }
 
-body *, :root{
-    font-family: 'Inter', sans-serif;
+body *,
+:root {
+    font-family: "Inter";
     line-height: 160%;
 }
+
 header {
     padding-top: 2rem;
     text-align: center;
 }
+
 header img {
     width: 15rem;
 }
@@ -53,6 +60,7 @@ section p {
     color: #A1A1AA;
 }
 
+/* Animações */
 main section {
     opacity: 0;
     transform: translateY(2rem);
@@ -76,7 +84,8 @@ form {
     margin: 1.25rem 0;
 }
 
-input, select {
+input,
+select {
     all: unset;
     border: 2px solid #9147ff;
     border-radius: 0.5rem;
@@ -106,4 +115,42 @@ button:hover {
     cursor: pointer;
     transform: translateY(-2px);
     box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+    transition: initial;
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+    color: black;
+}
+
+#aiResponse {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid #43E7AD;
+}
+
+#aiResponse ul {
+    padding-left: 1.5rem;
+    opacity: 0.8;
+}
+
+#aiResponse p {
+    color: white;
+}
+
+.loading {
+    animation: pulse 1s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
 }
