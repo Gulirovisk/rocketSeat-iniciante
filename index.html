@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="./assets/logo.png" alt="Logo sports NLW">
@@ -26,14 +28,17 @@
                 <form id="form">
                     <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
 
-                    <select id="gameSelect">
-                        <option value="">Selecione um jogo</option>
+                    <select id="gameSelect" placeholder="Selecione um jogo">
+                        <option value="" hidden selected>Selecione um jogo</option>
+                        <option value="clashRoyale">Clash Royale</option>
+                        <option value="freeFire">Free Fire</option>
+                        <option value="TFT">Teamfight Tactics</option>
                         <option value="valorant">Valorant</option>
                         <option value="lol">League of Legends</option>
                         <option value="cs">CS:GO</option>
                     </select>
 
-                    <input id="questionInput" type="text" placeholder="Ex: Melhor build para ADC..." required>
+                    <input id="questionInput" type="text" placeholder="Ex: Melhor build para..." required>
                     <button id="askButton">Perguntar</button>
                 </form>
 
@@ -48,4 +53,5 @@
     <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>
